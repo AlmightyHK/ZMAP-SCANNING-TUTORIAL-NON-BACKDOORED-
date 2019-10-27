@@ -1,0 +1,22 @@
+- This version of update has the ability to bruteforce ssh on multiple ports.
+- Very fast
+- 100s of default username:password combos hardcoded into the script, no need for password file.
+- Simply scan a range of ips on any known SSH port using zmap or some other port scanner, directing the output of the scan to mfu.txt
+- ./update <SSH PORT> <Max Forks>
+- Done
+
+- Make sure you change the permissions to the file also: chmod +x update
+
+OS/Distribution: Linux/Centos6
+
+Install these dependencies:
+yum install libssh -y
+yum install libssh-devel -y
+
+Running the script:
+./update <SSH PORT> <Max Forks>
+
+Ex.
+./update 22 2000
+./update 2222 2000
+./update 666 2000
